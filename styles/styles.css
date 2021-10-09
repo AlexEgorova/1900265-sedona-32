@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    max-width: 1200px;
     width: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 22px;
@@ -50,12 +51,10 @@ body {
 
 .navigation {
     display: flex;
-    width: 1200px;
     margin: 0 auto;
 }
 
 .navigation-list {
-    width: 531px;
     margin: 0;
     padding: 0;
 }
@@ -105,8 +104,8 @@ body {
 }
 
 .greeting-title {
-    display: grid;
     margin: 0 auto;
+    padding: 63px 240px 79px;
 }
 
 .greeting-title-main {
@@ -116,10 +115,6 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    width: 720px;
-    margin-top: 63px;
-    margin-left: 240px;
-    margin-right: 240px;
 } 
 
 .greeting-title-text {
@@ -128,9 +123,6 @@ body {
     line-height: 36px;     
     font-weight: 400;
     text-align: center;
-    width: 720px;
-    margin-left: 240px;
-    margin-right: 240px;
 }
 
 /*Преимущества*/
@@ -142,30 +134,32 @@ body {
 }
 
 .advantages-list {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantages-item-details {
+    width: 100%;
 }
 
 .advantages-item-container {
     display: flex;
 }
 
-.advantages-item-blue {
-    width: 400px;
-    background: #83B3D3;
-    color: #FFFFFF;
-}
-
-.advantages-item-grey12 {
-    width: 400px;
-    background: rgba(131, 179, 211, 0.12);
-}
-
 .advantages-item {
     width: 400px;
 }
 
-.advantages-item-grey20 {
-    width: 400px;
+.blue {
+    background: #83B3D3;
+    color: #FFFFFF;
+}
+
+.grey12 {
+    background: rgba(131, 179, 211, 0.12);
+}
+
+.grey20 {
     background: rgba(131, 179, 211, 0.2);
 }
 
@@ -196,9 +190,8 @@ body {
 
 /*поиск гостиниц*/
 .search {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    padding: 91px 240px;
 }
 
 .search-title {
@@ -208,9 +201,6 @@ body {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    width: 720px; 
-    margin-left: 240px;
-    margin-right: 240px;
 }
 
 .search-text {
@@ -219,9 +209,6 @@ body {
     line-height: 26px;     
     font-weight: 400;
     text-align: center;
-    width: 720px;
-    margin-left: 240px;
-    margin-right: 240px;
 }
 
 .button-search {
@@ -234,9 +221,6 @@ body {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    width: 575px;
-    margin-left: 240px;
-    margin-right: 240px;
 }
 
 /*подписка на рассылку*/
@@ -245,9 +229,8 @@ body {
     background-image: url("../images/background-newletter.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    padding: 94px 200px;
 }
 
 .newletter-title {
@@ -255,13 +238,9 @@ body {
     font-size: 30px;
     line-height: 36px;     
     font-weight: 700;
-    /* background: #83B3D3; */
     color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
-    width: 720px; 
-    margin-left: 240px;
-    margin-right: 240px;
 }
 
 .newletter-text {
@@ -269,13 +248,8 @@ body {
     font-size: 22px;
     line-height: 26px;     
     font-weight: 400;
-    /* background: #83B3D3; */
     color: #FFFFFF;
     text-align: center;
-    width: 720px;
-    margin-left: 240px;
-    margin-right: 240px;
-    margin-top: 15px;
 }
 
 .newletter-email {
@@ -294,8 +268,6 @@ body {
     color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
-    width: 200px;
-    margin-bottom: 93px;
 }
 
 /*footer*/
@@ -313,7 +285,7 @@ body {
 
 .footer-social-item {
     width: 20px;
-    margin-right: 30px;
+    margin-right: auto;
 }
 
 .footer-contacts-phone {
@@ -325,17 +297,11 @@ body {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    width: 720px;
-    margin-right: 53px;
-    margin-top: 40px;
-    margin-bottom: 30px;
 }
 
 .htmlacademy-link {
     width: 115px;
-    margin-top: 42px;
-    margin-bottom: 44px;
-    margin-right: 72px;
+    margin-left: auto;
 }
 
 /*каталог*/
