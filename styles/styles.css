@@ -68,7 +68,7 @@ body {
 
 .page-header-logo {
     display: block;
-    margin: 0;
+    margin: 0 auto;
     width: 138px;
 }
 
@@ -176,6 +176,12 @@ body {
     text-transform: uppercase;
 }
 
+.advantages-photo img{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 .advantages-list-other {
     display: flex;  
     margin: 0;
@@ -224,7 +230,7 @@ body {
     text-decoration: none;
 }
 
-/*подписка на рассылку*/
+/*подписка на рассылку Главная*/
 
 .newletter {
     background-image: url("../images/background-newletter.jpg");
@@ -314,6 +320,9 @@ body {
 }
 
 /*каталог*/
+.page-catalog {
+    padding: 0 40px;
+}
 
 .catalog-select {
     background: #83B3D3;
@@ -332,6 +341,11 @@ body {
     text-transform: uppercase;
 }
 
+.breadcrumbs {
+    display: flex;
+    list-style: none;
+}
+
 .breadcrumbs-link {
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
@@ -341,12 +355,21 @@ body {
     text-decoration: none; 
 }
 
+.catalog-filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .catalog-filter-title {
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 26px;     
     font-weight: 700;
     color: #FFFFFF;
+}
+
+.catalog-filter-list {
+    list-style: none;
 }
 
 .catalog-filter-item {
@@ -380,6 +403,11 @@ body {
 
 .sorting-hotels {
     font-family: "PT Sans", sans-serif;
+    display: flex;
+}
+
+.sorting-hotels-mode {
+    margin-left: auto;
 }
 
 .sorting-hotels-title {
@@ -387,6 +415,16 @@ body {
     font-size: 30px;
     line-height: 39px;     
     font-weight: 700;
+}
+
+.catalog-hotels {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hotel-card {
+    display: flex;
 }
 
 .hotel-card-link {
@@ -403,6 +441,10 @@ body {
     font-size: 18px;
     line-height: 23px;     
     font-weight: 400;
+}
+
+.search-results-rating {
+    margin-left: auto;
 }
 
 .hotel-card-button {
@@ -452,6 +494,15 @@ body {
     text-decoration: none;  
 }
 
+.pagination-quantity {
+    display: flex;
+}
+.pagination {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
 .pagination-show-more {
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
@@ -461,7 +512,10 @@ body {
     color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
-    text-decoration: none; 
+    text-decoration: none;
+    display: block;
+    width: 625px;
+    margin: 61px auto;
 }
 
 .pagination-link {
@@ -492,8 +546,9 @@ body {
     font-weight: 400;
     background: #E5E5E5;
     color: #333333;
+    margin-left: auto;
 }
-
+/*подписка на рассылку Каталог*/
 .catalog-newletter-title {
     font-family: "PT Sans", sans-serif;
     font-size: 30px;

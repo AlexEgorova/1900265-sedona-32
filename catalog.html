@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body>
+<body class="page-catalog">
   <header class="page-header">
     <nav class="navigation">
       <ul class="navigation-list">
@@ -35,7 +35,7 @@
     </nav>
   </header>
 
-  <main class="main-inner">
+  <main class="main-inner">    
     <div class="catalog-select">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -58,15 +58,15 @@
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <input class="visually-hidden control-input" type="checkbox" name="pool" id="pool" checked>
+                <input class="control-input" type="checkbox" name="pool" id="pool" checked>
                 <label class="control" for="pool">Бассейн</label>           
               </li>
               <li class="catalog-filter-item">
-                <input class="visually-hidden control-input" type="checkbox" name="parking" id="parking" checked>
+                <input class="control-input" type="checkbox" name="parking" id="parking" checked>
                 <label class="control" for="parking">Парковка</label>
               </li>
               <li class="catalog-filter-item">
-                <input class="visually-hidden control-input" type="checkbox" name="wi-fi" id="wi-fi">
+                <input class="control-input" type="checkbox" name="wi-fi" id="wi-fi">
                 <label class="control" for="wi-fi">Wi-Fi</label>
               </li>
             </ul>
@@ -76,15 +76,15 @@
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <input class="visually-hidden control-input" type="radio" name="product-group" value="hotel" id="hotel" checked>
+                <input class="control-input" type="radio" name="product-group" value="hotel" id="hotel" checked>
                 <label class="control" for="hotel">Гостиница</label>
               </li>
               <li class="catalog-filter-item">
-                <input class="visually-hidden control-input" type="radio" name="product-group" value="motel" id="motel">
+                <input class="control-input" type="radio" name="product-group" value="motel" id="motel">
                 <label class="control" for="motel">Мотель</label>
               </li>
               <li class="catalog-filter-item">
-                <input class="visually-hidden control-input" type="radio" name="product-group" value="apartments" id="apartments">
+                <input class="control-input" type="radio" name="product-group" value="apartments" id="apartments">
                 <label class="control" for="apartments">Апартаменты</label>
               </li>
             </ul>
@@ -283,7 +283,7 @@
       
     </section> 
 
-    <section>
+    <section class="pagination-quantity">
       <ul class="pagination">
         <li class="pagination-item">
           <a class="pagination-link pagination-current">1</a>
@@ -312,8 +312,8 @@
           <option value="all">все</option>
         </select>
       </div>                                   
-    </select>
-    
+    </section>
+<!-- подписка -->    
     <section class="catalog-newletter">
       <h2 class="catalog-newletter-title">Подпишитесь на рассылку</h2>
       <p class="catalog-newletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
