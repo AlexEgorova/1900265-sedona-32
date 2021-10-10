@@ -17,12 +17,8 @@
 
 /*общие для всей страницы*/
 
-html {
-    height: 100%;
-}
-
 body {
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -57,6 +53,7 @@ body {
 .navigation-list {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .navigation-link {
@@ -71,7 +68,7 @@ body {
 
 .page-header-logo {
     display: block;
-    margin: 0 auto;
+    margin: 0;
     width: 138px;
 }
 
@@ -127,15 +124,12 @@ body {
 
 /*Преимущества*/
 
-.advantages {
-    display: flex; 
-    margin: 0;
-    padding: 0;
-}
-
 .advantages-list {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .advantages-item-details {
@@ -186,6 +180,13 @@ body {
     display: flex;  
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+
+.advantages-photo-other {
+    display: block;
+    margin: 0 auto;
+
 }
 
 /*поиск гостиниц*/
@@ -270,17 +271,25 @@ body {
     text-transform: uppercase;
 }
 
+.button-search {
+    display: block;
+    max-width: 575px;
+    margin: 0 auto;
+}
+
 /*footer*/
 
 .page-footer {
     display: flex;
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
     justify-content: space-between;
 }
 
 .footer-social-list {
     display: flex;
+    margin-right: auto;
+    list-style: none;
 }
 
 .footer-social-item {
