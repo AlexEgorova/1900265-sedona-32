@@ -15,6 +15,12 @@
     font-display: swap;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /*общие для всей страницы*/
 
 body {
@@ -57,7 +63,6 @@ body {
 }
 
 .navigation-link {
-    font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 26px;     
     font-weight: 700;
@@ -173,7 +178,6 @@ body {
     line-height: 21px;     
     font-weight: 400;
     text-align: center;
-    text-transform: uppercase;
 }
 
 .advantages-photo img{
@@ -402,7 +406,6 @@ body {
 }
 
 .sorting-hotels {
-    font-family: "PT Sans", sans-serif;
     display: flex;
 }
 
@@ -411,7 +414,6 @@ body {
 }
 
 .sorting-hotels-title {
-    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 39px;     
     font-weight: 700;
@@ -428,12 +430,12 @@ body {
 }
 
 .hotel-card-link {
-    font-family: "PT Sans", sans-serif;
     font-size: 24px;
     line-height: 31px;     
     font-weight: 700;
     color: #000000;
     text-decoration: none;
+    display: inline-block;
 }
 
 .hotel-type-container {
@@ -447,8 +449,14 @@ body {
     margin-left: auto;
 }
 
+span .rating-star{
+    display:  inline-block;
+    background-image: url(../images/star.svg);
+    background-size: 18px;
+    background-color: #FFFFFF;
+}
+
 .hotel-card-button {
-    font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 21px;     
     font-weight: 700;
@@ -457,6 +465,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    display: inline-block;
 }
 
 .button-choose-favorites {
@@ -504,7 +513,6 @@ body {
 }
 
 .pagination-show-more {
-    font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 26px;     
     font-weight: 700;
@@ -519,7 +527,6 @@ body {
 }
 
 .pagination-link {
-    font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 26px;     
     font-weight: 700;
@@ -530,37 +537,35 @@ body {
 }
 
 .pagination-current {
-    font-family: "PT Sans", sans-serif;
     font-size: 20px;
     line-height: 26px;     
     font-weight: 700;
+    color: #000000;
     background: #F2F2F2;
     text-align: center;
     text-decoration: none;
 }
 
 .quantity-hotels {
-    font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 23px;     
     font-weight: 400;
-    background: #E5E5E5;
     color: #333333;
     margin-left: auto;
 }
 /*подписка на рассылку Каталог*/
+.catalog-newletter {
+    text-align:center;
+}
+
 .catalog-newletter-title {
-    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;     
     font-weight: 700;
-    text-align: center;
 }
 
 .catalog-newletter-text{
-    font-family: "PT Sans", sans-serif;
     font-size: 22px;
     line-height: 26px;     
     font-weight: 400;
-    text-align: center;
 }
