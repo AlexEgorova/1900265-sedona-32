@@ -234,33 +234,35 @@ body {
     text-decoration: none;
 }
 
-/*подписка на рассылку Главная*/
+/*подписка на рассылку*/
 
 .newletter {
-    background-image: url("../images/background-newletter.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
     align-items: center;
+    text-align:center;
     padding: 94px 200px;
 }
 
+.newletter-background {
+    background-image: url("../images/background-newletter.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat; 
+}
+
 .newletter-title {
-    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;     
     font-weight: 700;
-    color: #FFFFFF;
-    text-align: center;
     text-transform: uppercase;
 }
 
 .newletter-text {
-    font-family: "PT Sans", sans-serif;
     font-size: 22px;
     line-height: 26px;     
     font-weight: 400;
+}
+
+.newletter-white {
     color: #FFFFFF;
-    text-align: center;
 }
 
 .newletter-email {
@@ -449,11 +451,11 @@ body {
     margin-left: auto;
 }
 
-span .rating-star{
-    display:  inline-block;
+.rating-star{
+    display:  inline-block; 
     background-image: url(../images/star.svg);
-    background-size: 18px;
-    background-color: #FFFFFF;
+    width: 18px;
+    height: 18px;
 }
 
 .hotel-card-button {
@@ -552,20 +554,4 @@ span .rating-star{
     font-weight: 400;
     color: #333333;
     margin-left: auto;
-}
-/*подписка на рассылку Каталог*/
-.catalog-newletter {
-    text-align:center;
-}
-
-.catalog-newletter-title {
-    font-size: 30px;
-    line-height: 36px;     
-    font-weight: 700;
-}
-
-.catalog-newletter-text{
-    font-size: 22px;
-    line-height: 26px;     
-    font-weight: 400;
 }
