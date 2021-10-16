@@ -128,10 +128,6 @@ body {
 /*первый экран*/
 
 .greeting {
-    display: block;
-    height: 485px;
-    padding-left: 371px;
-    padding-right: 371px;
     padding-top: 51px;
     padding-bottom: 82px;
     background-image: url("../images/index-background.jpg");
@@ -149,7 +145,9 @@ body {
 
 .greeting-title {
     margin: 0 auto;
-    padding: 63px 240px 79px;
+    padding-top: 63px;
+    padding-bottom: 79px;
+    max-width: 720px;
 }
 
 .greeting-title-main {
@@ -190,11 +188,14 @@ body {
 
 .advantages-item {
     display: block;
-    width: 400px;    
+    width: 400px;        
     padding-top: 89px;
     padding-left: 75px;
     padding-right: 75px;
     padding-bottom: 79px;
+    padding-top: 89px;
+    min-height: 384px;
+    
 }
 
 .blue {
@@ -210,22 +211,10 @@ body {
 
 .grey12 {
     background: rgba(131, 179, 211, 0.12);
-    display: block;
-    width: 400px;    
-    padding-top: 89px;
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-bottom: 79px;
 }
 
 .grey20 {
     background: rgba(131, 179, 211, 0.2);
-    display: block;
-    width: 400px;    
-    padding-top: 91px;
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-bottom: 79px;
 }
 
 .advantages-title {
@@ -268,8 +257,12 @@ body {
 
 /*поиск гостиниц*/
 .search {
+    margin: 0 auto;
+    max-width: 720px;
     align-items: center;
-    padding: 91px 240px;
+    padding-top: 91px;
+    padding-bottom: 91px;
+
 }
 
 .search-title {
@@ -308,7 +301,8 @@ body {
 .newletter {
     align-items: center;
     text-align:center;
-    padding: 94px 200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .newletter-background {
