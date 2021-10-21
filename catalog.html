@@ -101,26 +101,18 @@
             
             <div class="filter-range-container">
               <div class="range-block-change">
-                <div class="range-block-min">
-                  <label for="min">
-                    <input class="catalog-filter-input" type="number" name="min-price" id="min" value="0">
-                  </label>
-                  <span>от</span>
+                <div class="range-block-item">
+                  <input class="catalog-filter-input" type="number" name="min-price" id="min" value="0" min="0" max="9000">
+                  <label for="min">от</label>
                 </div>
-                <div class="range-block-max">
-                  <label for="max">
-                    <input class="catalog-filter-input" type="number" name="max-price" id="max" value="9000">
-                  </label>
-                  <span>до</span>
+                <div class="range-block-item">
+                  <input class="catalog-filter-input" type="number" name="max-price" id="max" value="9000" min="0" max="9000">
+                  <label for="max">до</label>
                 </div>
               </div>
-              <div class="block-change-price">
-                <button class="range-toggle toggle-min" type="button">
-                  <span class="visually hidder">Изменить минимальную цену</span>
-                </button>
-                <button class="range-toggle toggle-max" type="button">
-                  <span class="visually hidder">Изменить максимальную цену</span>
-                </button>
+              <div class="filter-toggle">
+                <button class="filter-toggle-item filter-toggle-item-min" type="button" aria-label="Изменить минимальную цену"></button>
+                <button class="filter-toggle-item filter-toggle-item-max" type="button" aria-label="Изменить максимальную цену"></button>
               </div>
             </div>
           </fieldset>
