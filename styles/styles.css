@@ -23,6 +23,12 @@
 
 /*общие для всей страницы*/
 
+html {
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 body {
     margin: 0 auto;
     display: flex;
@@ -57,6 +63,8 @@ button {
 
 .navigation {
     display: flex;
+    position: relative;
+    height: 65px;
     justify-content: space-between;
     padding-left: 71px;
     padding-right: 71px;
@@ -73,7 +81,7 @@ button {
 }
 
 .navigation-item:not(:last-child) {
-    margin-right: 33px;
+    margin-right: 8px;
     padding: 0;
 }
 
@@ -93,7 +101,7 @@ button {
 .navigation-link-current::before {
     position: absolute;
     height: 2px;
-    bottom: -19px;
+    bottom: -14px;
     right: 10px;
     left: 10px;    
     background-color: #756257;
@@ -117,9 +125,11 @@ button {
 }
 
 .page-header-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -69px;
     display: block;
-    margin: 0 auto;
-    width: 100%;
+    width: 138px;
     height: auto;
     object-fit: cover;
     object-position: center;
@@ -143,10 +153,7 @@ button {
 }
 
 .navigation-item-user:not(:last-child) {
-    /* position: relative; */
     margin-right: 8px;
-    /* width: 38px; */
-    /* height: 38px; */
 }
 
 .navigation-link-user {
@@ -175,20 +182,22 @@ button {
     fill: #000000;
 }
 
-.favorites-icon::after {
+.favorites-number {
     position: absolute;
     height: 20px;
     top: 0;
     right: 0;
     left: 50%;
-    border-radius: 50%;  
-    background-color: #7DB54F;
-    font-family: "PT Sans";
+    width: 19px;
+    height: 19px;
+    padding: 3px;
     font-size: 10px;
+    line-height: 13px;
     font-weight: 400;
     text-align: center;
     color: #FFFFFF;
-    content: "12";
+    background-color: #7DB54F;
+    border-radius: 50%;
 }
 
 .navigation-link-user:hover svg {
@@ -282,7 +291,7 @@ button {
     text-transform: uppercase;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 23px;
+    margin-bottom: 35px;
 } 
 
 .greeting-title-text {
@@ -312,19 +321,19 @@ button {
 }
 
 .advantages-item {
-    width: 400px;        
+    width: 400px; 
+    height: 384px;       
     padding-left: 75px;
     padding-right: 75px;
     padding-bottom: 79px;
     padding-top: 89px;
-    min-height: 384px;    
+    /* min-height: 384px;     */
 }
 
 .blue {
     background: #83B3D3;
     color: #FFFFFF;
     display: block;
-    width: 400px;
     padding-top: 98px;
     padding-left: 90px;
     padding-right: 90px;
@@ -346,7 +355,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     margin: 0;
-    margin-bottom: 25px; 
+    margin-bottom: 30px; 
 }
 
 .advantages-description {
@@ -355,13 +364,12 @@ button {
     font-weight: 400;
     text-align: center;
     margin: 0;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
 }
 
 .advantages-photo img{
     display: block;
     width: 800px;
-    height: 400px;
     margin: 0 auto;
     object-fit: cover;
     object-position: center;
@@ -401,7 +409,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .search-text {
@@ -410,7 +418,7 @@ button {
     font-weight: 400;
     text-align: center;
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 53px;
 }
 
 .button-search {
@@ -449,7 +457,7 @@ button {
 
 /*подписка на рассылку*/
 
-.newletter {
+.newletter {    
     align-items: center;
     text-align:center;
     padding-top: 94px;
@@ -476,23 +484,68 @@ button {
     line-height: 26px;     
     font-weight: 400;
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .newletter-white {
     color: #FFFFFF;
 }
 
-.newletter-email {
+.newletter-email .field-group {
+    display: flex;
     font-size: 18px;
     line-height: 26px;     
     font-weight: 400;
+    margin: 0;
 }
 
+.field {
+    width: 600px;
+    height: 60px;
+    margin: 0;
+    margin-right: -6px;
+    padding-left: 22px;
+    border: none;
+    border-radius: 10px 0px 0px 10px; 
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    background: #F2F2F2;
+}
+
+.field:hover {
+    background: #E6E6E6;
+}
+
+.field:focus {
+    outline: 3px solid #83B3D3;
+    outline-offset: -3px;
+}
+
+.field:active {
+    background: #FFFFFF;
+    outline: 2px solid #000000;
+    outline-offset: -2px;
+    color: #000000;
+}
+
+.field:disabled,
+.field:disabled:hover {
+    background: #FFFFFF;
+    outline: 2px solid #FF5757;
+    outline-offset: -2px;
+    color: #000000;
+    opacity: 0.6;
+}
+
+/*кнопка подписаться*/
 .newletter-button {
     display: inline-block;
     width: 200px;
     height: 60px;
+    margin: 0;
     font-size: 20px;
     line-height: 26px;     
     font-weight: 700;
@@ -512,6 +565,7 @@ button {
 .newletter-button:focus {
     background: #68A2CA;
     outline: 3px solid #756257;
+    outline-offset: -3px;
     border-radius: 0px 10px 10px 0px;
 }
 
@@ -524,8 +578,9 @@ button {
 .page-footer {
     display: grid;
     grid-template-columns: 1fr 365px 1fr;
+    max-height: 120px;
     gap: 20px;
-    padding-top: 40px;
+    padding-top: 25px;
     padding-bottom: 30px;
     padding-left: 72px;
     padding-right: 72px;
@@ -607,8 +662,7 @@ button {
 /*логотип html*/
 .htmlacademy-link {
     display: block;
-    width: 115px;
-    height: 34px;
+    width: 160px;
     margin-left: auto;
     padding: 10px;
     fill: #000000;
@@ -629,7 +683,7 @@ button {
 }
 
 /*каталог*/
-.main-inner {
+.main-container {
     flex-grow: 1;
     width: 1200px;
     margin: 0 auto;
