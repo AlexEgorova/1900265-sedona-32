@@ -24,7 +24,6 @@
 /*общие для всей страницы*/
 
 body {
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -35,6 +34,7 @@ body {
     line-height: 26px; 
     color: #000000;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
 }
 
 button {
@@ -64,8 +64,6 @@ button {
     padding-left: 71px;
     padding-right: 71px;
 }
-
-
 
 .navigation-list {
     display: flex;
@@ -606,17 +604,14 @@ button {
     grid-template-columns: 1fr 365px 1fr;
     max-height: 120px;
     gap: 20px;
+    position: relative;
     align-items: center;
     padding-top: 25px;
     padding-bottom: 30px;
     padding-left: 57px;
     padding-right: 72px;
-    position: relative;
 }
 /*соц.сети*/
-.page-footer {
-    position: relative;
-}
 
 .footer-social-list {
     display: flex;
@@ -725,7 +720,7 @@ button {
     opacity: 0.3;
 }
 
-/*каталог*/
+/*стр-каталог*/
 .main-inner {
     flex-grow: 1;
     width: 1200px;
@@ -748,7 +743,7 @@ button {
 }
 
 .inner-header {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
 }
 
 .inner-header-title {
@@ -757,7 +752,6 @@ button {
     font-weight: 700;
     color: #FFFFFF;
     margin: 0;
-    /* margin-bottom: 5px; */
 }
 
 .breadcrumbs {
@@ -822,16 +816,21 @@ button {
 .catalog-filter {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
 }
 
 .catalog-filter-group {
     margin: 0;
+    margin-right: 67px;
     padding: 0;
     border: none;
 }
+
+.housing  {
+    margin-right: 164px;
+} 
 
 .catalog-filter-title {
     font-size: 20px;
@@ -845,10 +844,11 @@ button {
 }
 
 .catalog-filter-list {
-    list-style: none;
     display: block;
+    width: 150px;    
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .catalog-filter-item {
@@ -859,21 +859,199 @@ button {
     padding: 0;
     margin-bottom: 16px;
 }
+
+.infra .catalog-filter-item {
+    margin-bottom: 11px; 
+}
+
+.housing .catalog-filter-item {
+    margin-bottom: 11px;
+}
+
+.control {
+    position: relative;
+    display: block;
+    padding-left: 19px;
+}
+
+.control-mark {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF; 
+    border-radius: 4px;
+    cursor: pointer;
+    content: "";    
+}
+
+.control-mark:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.control .control-mark:focus {
+    outline: 3px solid #83B3D3;
+    outline-offset: -3px; /*не работает*/
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    width: 13px;
+    height: 10px;
+    background-image: url("/images/tick.svg");
+    content: "";
+}
+
+.control-label {
+    font-weight: 400;
+    margin-left: 19px;
+}
+
+.housing .control-mark {
+    border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before { 
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(63, 94, 114, 1);
+    border-radius: 50%;
+    content: "";
+}
+
+/*стоимость*/
+.cost .catalog-filter-title {
+    margin-bottom: 37px;
+}
+
+.filter-range-container {
+    display: block;
+    width: 287px;
+}
+
+.range-block-change {
+    display: flex;
+    flex-direction: row;
+    width: 287px;
+}
+
+.catalog-filter-input {
+    display: inline-block;
+    width: 142px;
+    height: 45px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;    
+    background-color: transparent;
+    font: inherit;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-top: 12px;
+    padding-left: 15px;
+    padding-bottom: 11px;
+}
+
+.catalog-filter-input::-webkit-outer-spin-button,
+.catalog-filter-input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.cost-min {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.cost-max {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.range-block-item:hover {
+    opacity: 0.6;
+}
+
+.catalog-filter-input:focus {
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 3px #81B3D2;
+}
+
 /*бегунок*/
 
+.filter-toggle {
+    position: relative;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+    position: absolute;
+    height: 3px;
+    background-color: #FFFFFF;
+}
+
+.filter-toggle-item {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFFFF; 
+    border-radius: 4px;
+    border:none;
+    cursor: pointer;
+}
+
+.filter-toggle-item:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.filter-toggle-item:focus {
+    outline: 3px solid #83B3D3;
+    outline-offset: -3px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.filter-toggle-item:active {
+    outline: 2px solid #83B3D3;
+    outline-offset: -2px;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.filter-toggle-item-min {
+    top: -10px;
+    left: -10px;
+}
+
+.filter-toggle-item-max {
+    top: -10px;
+    left: 205px;
+}
 
 /*кнопки выбора*/
 .catalog-filter-button {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    align-items: center;
+    margin: auto;
+    margin-right: 0;
+    margin-bottom: 5px;
 }
 
 .button-submit {
     display: inline-block;
     width: 160px;
     height: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 16px;
     line-height: 21px;     
     font-weight: 700;
@@ -899,7 +1077,7 @@ button {
 
 .button-discard {
     display: inline-block;
-    width: 160px; /*д.б. 100px*/
+    width: 100px; 
     height: 32px;
     font-size: 18px;
     line-height: 24px;     
@@ -923,6 +1101,7 @@ button {
 
 .catalog-inner {
     padding: 0 72px;
+    margin-bottom: -10px;
 }
 
 .sorting-hotels {
@@ -945,7 +1124,10 @@ button {
 }
 
 .sorting-hotels-mode a{
-    padding: 16px 17px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    padding: 9px 14px;
     border: 2px solid #E6E6E6;
     border-radius: 4px;
 }
@@ -970,9 +1152,12 @@ button {
     font-weight: 700;
     margin: 0;
     margin-right: 192px;
+    padding-top: 5px;
+    text-transform: uppercase;
 }
 
 .select-control {
+    display: block;    
     font: inherit;
     font-weight: 400;
     outline: 2px solid #E6E6E6;
@@ -987,8 +1172,14 @@ button {
 
 .select-sorting-type {
     width: 287px;
-    padding: 12px 19px;
-    
+    height: 45px;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 18px; 
+    font: inherit;
+    font-size: 18px;
+    line-height: 23px;
+    color: #333333;    
 }
 
 /*каталог с картиками*/
@@ -1005,17 +1196,7 @@ button {
     column-gap: 36px;
     border-bottom: 1px solid #E6E6E6;
     padding-top: 28px;
-    padding-bottom: 30px;
-}
-
-.hotel-card-link {
-    display: inline-block;
-    font-size: 24px;
-    line-height: 31px;     
-    font-weight: 700;
-    color: #000000;
-    text-decoration: none;
-    /* padding: 15px 10px; */
+    padding-bottom: 27px;
 }
 
 .hotel-card-image {
@@ -1041,6 +1222,16 @@ button {
     opacity: 0.3;
 }
 
+.hotel-card-link {
+    display: inline-block;
+    font-size: 21px;
+    line-height: 31px;     
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
 .hotel-card-title {
     margin: 0;
     border: none;
@@ -1053,7 +1244,6 @@ button {
 .hotel-card-link:focus {
     outline: 3px solid #83B3D3;
     border-radius: 10px;
-    /* padding: 15px 10px; */ /*если добавить - след.блок прыгает*/
 }
 
 .hotel-card-title:active {
@@ -1062,14 +1252,21 @@ button {
 }
 
 .hotel-type-container {
+    display: grid;
+    grid-template-columns: 160px 160px;
+    width: 319px;
     font-size: 18px;
     line-height: 23px;     
     font-weight: 400;
     margin-bottom: 31px;
+    padding: 0;
 }
 
-.hotel-type-container p {
-    display: inline-block;
+.hotel-card-type {
+    margin: 0;
+}
+
+.hotel-card-price {
     margin: 0;
 }
 
@@ -1077,6 +1274,7 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 160px;
     align-items: center;
     margin-left: auto;
 }
@@ -1135,6 +1333,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: -0.1em;
     border: none;
     border-radius: 4px;
 }
@@ -1176,6 +1375,9 @@ button {
 }
 
 .hotel-rating {
+    display: block;
+    width: 160px;
+    height: 37px;
     font-size: 16px;
     line-height: 21px;     
     font-weight: 400;
@@ -1184,6 +1386,7 @@ button {
     text-align: center;
     text-transform: uppercase;
     margin: 0;
+    padding-top: 5px;
 }
 
 .show-more {
@@ -1198,7 +1401,7 @@ button {
     width: 625px;
     height: 55px;
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 26px;     
     font-weight: 700;
     background: #83B3D3;
@@ -1280,6 +1483,7 @@ button {
     flex-wrap: wrap;
     margin-left: auto;
     padding: 0; 
+    padding-bottom: 10px;
     font-size: 18px;
     line-height: 23px;
     align-items: center;     
