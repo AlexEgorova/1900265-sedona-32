@@ -902,7 +902,6 @@ img {
 
 .htmlacademy-link:focus {
   outline: 3px solid #83B3D3;
-  outline-offset: 15px;
   border-radius: 10px;
 }
 
@@ -1497,7 +1496,7 @@ img {
   font-weight: 400;
   color: #FFFFFF;
   margin-bottom: 30px;
-  padding: 12px 5px 11px 15px;
+  padding: 12px 45px 11px 15px;
 }
 
 .catalog-filter-input::-webkit-outer-spin-button,
