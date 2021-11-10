@@ -1557,6 +1557,8 @@ input[type="number"]:focus {
   position: absolute;
   height: 3px;
   background-color: #FFFFFF;
+  width: 227px;
+  right: 51px;
 }
 
 .filter-toggle-item {
