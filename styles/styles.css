@@ -171,7 +171,7 @@ img {
   height: 38px;
 }
 
-.search-icon svg{
+.search-icon svg {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -181,7 +181,7 @@ img {
   fill: #000000;
 }
 
-.favorites-icon svg{
+.favorites-icon svg {
   position: absolute;
   top: 0px;
   right: 0;
@@ -216,10 +216,10 @@ img {
   border-radius: 10px; 
 }
 
-.navigation-link:active svg{
+.navigation-link:active svg {
   fill: #756257;
   opacity: 0.3;
-} 
+}
 /*поповер*/
 .popover-favorites {
   position: absolute;
@@ -327,7 +327,7 @@ img {
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
-  color: #000000;
+  color: #333333;
   text-decoration: none;
   grid-column: 2 / 3;
 }
@@ -367,6 +367,7 @@ img {
   padding-bottom: 19px;
   margin-top: 15px;
   margin-bottom: 0;
+  font-family: "PT Sans", serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -400,6 +401,7 @@ img {
   width: 160px;
   padding-top: 9px;
   padding-bottom: 10px;
+  font-family: "PT Sans", serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -473,13 +475,14 @@ img {
   text-align: center;
   margin-top: 0;
   margin-bottom: 33px;
-} 
+}
 
 .greeting-title-text {
   font-size: 22px;
   line-height: 36px;
   font-weight: 400;
   text-align: center;
+  color: #333333;
   margin: 0;
 }
 
@@ -529,11 +532,12 @@ img {
   line-height: 21px;
   font-weight: 400;
   text-align: center;
+  color: #333333;
   margin: 0;
   margin-bottom: 30px;
 }
 
-.advantages-photo img{
+.advantages-photo img {
   display: block;
   width: 800px;
   margin: 0 auto;
@@ -580,11 +584,11 @@ img {
   padding-left: 80px;
 }
 
-.grey12 .advantages-description {
-    margin-top: 23px;
+.grey12 .advantages-description {  
+  margin-top: 23px;
 }
 
-.advantages-list-other .grey12{
+.advantages-list-other .grey12 {
   padding-top: 88px;
 }
 
@@ -622,13 +626,14 @@ img {
   line-height: 26px;
   font-weight: 400;
   text-align: center;
+  color: #333333;
   margin: 0;
   margin-bottom: 55px;
 }
 
 .button-search {
   display: block;
-  width: 575px;
+  max-width: 575px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -691,6 +696,7 @@ img {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
+  color: #333333;
   margin: 0;
   margin-bottom: 45px;
   padding-left: 100px;
@@ -747,20 +753,30 @@ img {
 
 .field:disabled,
 .field:disabled:hover {
-  background: #FFFFFF;
+  color: #000000;
+  background-color: #FFFFFF;
   outline: 2px solid #FF5757;
   outline-offset: -2px;
+}
+
+.field:focus:invalid {
+  outline: 2px solid #FF5757;
+  outline-offset: -2px;
+}
+
+.field::placeholder {
   color: #000000;
-  opacity: 0.6;
+  opacity: 0,6;
 }
 
 /*кнопка подписаться*/
 .newletter-button {
   display: inline-block;
-  width: 200px;
+  min-width: 200px;
   margin: 0;
   padding-top: 17px;
   padding-bottom: 18px;
+  font-family: "PT Sans", serif;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -825,11 +841,11 @@ img {
 .footer-social-link {
   position: relative;
   display: block;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
 }
 
-.footer-social-link svg{
+.footer-social-link svg {
   position: absolute;
   top: 0;
   right: 0;
@@ -839,7 +855,7 @@ img {
   fill: #83B3D3;
 }
 
-.footer-social-link:hover svg{
+.footer-social-link:hover svg {
   fill: #68A2CA;
 }
 
@@ -849,7 +865,7 @@ img {
   border-radius: 10px;
 }
 
-.footer-social-link:active svg{
+.footer-social-link:active svg {
   opacity: 0.3;
 }
 /*телефон*/
@@ -861,7 +877,7 @@ img {
   font-weight: 400;
   color: #000000;
   text-align: center;
- text-transform: uppercase;
+  text-transform: uppercase;
   text-decoration: none;
   border: none;
 }
@@ -884,7 +900,7 @@ img {
 
 .htmlacademy-link {
   display: flex;
-  width: 160px;
+  max-width: 160px;
   height: 70px;
   margin-left: auto;
 }
@@ -960,7 +976,7 @@ img {
 }
 
 .modal-close-button:active {
-   opacity: 0.3;
+  opacity: 0.3;
 }
 
 .modal-title {
@@ -1084,14 +1100,12 @@ img {
   flex-direction: row;
   padding: 0;
   margin-right: 56px;
-
-} 
+}
 
 .field-children {
   display: flex;
   flex-direction: row;
   padding: 0;
-
 }
 
 .search-field-input input {
@@ -1148,7 +1162,7 @@ img {
 .toggle-minus:active,
 .toggle-plus:active {
   opacity: 0.2;
-} 
+}
 
 .search-field::-webkit-outer-spin-button,
 .search-field::-webkit-inner-spin-button {
@@ -1367,9 +1381,9 @@ img {
   border: none;
 }
 
-.housing  {
+.housing {
   margin-right: 164px;
-} 
+}
 
 .catalog-filter-title {
   font-size: 20px;
@@ -1424,13 +1438,16 @@ img {
   cursor: pointer;
   content: "";
 }
-
-.control-mark:hover {
+.control-input:hover ~ .control-mark {
   background: rgba(255, 255, 255, 0.6);
 }
 
 .control-input:focus ~ .control-mark {
   outline: 3px solid #83B3D3;
+}
+
+.control-input:active ~ .control-mark {
+  opacity: 0.3;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -1611,10 +1628,11 @@ input[type="number"]:focus {
 
 .button-submit {
   display: inline-block;
-  width: 160px;
+  max-width: 160px;
   margin-bottom: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-family: "PT Sans", serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -1641,8 +1659,8 @@ input[type="number"]:focus {
 
 .button-discard {
   display: inline-block;
-  width: 100px; 
-  height: 32px;
+  max-width: 100px; 
+  font-family: "PT Sans", serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1694,7 +1712,7 @@ input[type="number"]:focus {
   margin-right: 8px;
 }
 
-.sorting-hotels-mode a{
+.sorting-hotels-mode a {
   display: block;
   width: 48px;
   height: 48px;
@@ -1792,7 +1810,7 @@ input[type="number"]:focus {
   opacity: 0.6;
 }
 
-.hotel-card-image:focus img{
+.hotel-card-image:focus img {
   outline: 3px solid #83B3D3;
   border: none;
 }
@@ -1837,6 +1855,7 @@ input[type="number"]:focus {
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
+  color: #333333;
   margin-bottom: 31px;
   padding: 0;
 }
@@ -1859,7 +1878,7 @@ input[type="number"]:focus {
 }
 
 .rating-star {
-  display:  inline-block; 
+  display: inline-block; 
   width: 18px;
   height: 18px;
   background-color: #FFFFFF;
@@ -1885,7 +1904,7 @@ input[type="number"]:focus {
   text-transform: uppercase;
   text-decoration: none;
   border: none; 
-  vertical-align: middle;   
+  vertical-align: middle;
 }
 
 .hotel-card-button:hover {
@@ -1904,6 +1923,7 @@ input[type="number"]:focus {
 .button-favorites {
   display: inline-block;
   width: 160px;
+  font-family: "PT Sans", serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -1922,6 +1942,7 @@ input[type="number"]:focus {
 }
 
 .choose {
+  font-family: "PT Sans", serif;
   background: #83B3D3;
 }
 
