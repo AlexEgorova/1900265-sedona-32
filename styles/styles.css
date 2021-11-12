@@ -577,6 +577,10 @@ img {
   margin-bottom: 30px;
 }
 
+.blue .advantages-description {
+  color: #FFFFFF;
+}
+
 .grey12 {
   background: rgba(131, 179, 211, 0.12);
   padding-top: 97px;
@@ -607,7 +611,7 @@ img {
   margin: 0 auto;
   max-width: 720px;
   align-items: center;
-  padding-top: 91px;
+  padding-top: 87px;
   padding-bottom: 91px;
 }
 
@@ -780,7 +784,6 @@ img {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
-  letter-spacing: -0.1em;
   background-color: #83B3D3;
   background-size: cover;
   color: #FFFFFF;
@@ -811,7 +814,7 @@ img {
 .page-footer {
   display: grid;
   grid-template-columns: 1fr 365px 1fr;
-  max-height: 120px;
+  min-height: 120px;
   gap: 20px;
   position: relative;
   align-items: center;
@@ -830,6 +833,7 @@ img {
   margin: 0;
   padding: 0;
   padding-left: 10px;
+  max-width: 160px;
   list-style: none;
 }
 
@@ -871,6 +875,7 @@ img {
 /*телефон*/
 .footer-contacts-phone {
   display: block;
+  max-width: 365px;
   margin: auto;
   font-size: 40px;
   line-height: 40px;
@@ -908,6 +913,8 @@ img {
 .htmlacademy-link svg {
   fill: #000000;
   margin: auto;
+  margin-right: 20px;
+
 }
 
 .htmlacademy-link:hover svg {
@@ -940,7 +947,8 @@ img {
 
 .modal {
   position: relative;
-  margin: auto;
+  top: 395px;
+  margin: 0 auto auto;
   padding: 54px 70px 70px 70px;
   background: #FFFFFF;
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
@@ -1621,9 +1629,10 @@ input[type="number"]:focus {
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
   margin-right: 0;
   margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .button-submit {
@@ -1631,7 +1640,9 @@ input[type="number"]:focus {
   max-width: 160px;
   margin-bottom: 15px;
   padding-top: 15px;
+  padding-right: 35px;
   padding-bottom: 15px;
+  padding-left: 35px;
   font-family: "PT Sans", serif;
   font-size: 16px;
   line-height: 21px;
@@ -1826,7 +1837,6 @@ input[type="number"]:focus {
   font-weight: 700;
   color: #000000;
   text-decoration: none;
-  letter-spacing: -0.01em;
 }
 
 .hotel-card-title {
@@ -1932,7 +1942,6 @@ input[type="number"]:focus {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: -0.1em;
   border: none;
   border-radius: 4px;
   padding-top: 9px;
